@@ -31,6 +31,7 @@ services:
       - '5005:5005'  # 暴露chat2api服务供外部访问
     environment:
       - TZ=Asia/Shanghai
+      - ENABLE_GATEWAY=true
       - AUTHORIZATION=sk-xxx
       - PROXY_URL=socks5://warp:1080  # 设置 PROXY_URL 为 warp 容器的代理地址
     depends_on:
